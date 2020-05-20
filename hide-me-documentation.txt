@@ -1,0 +1,35 @@
+=========================================================================================================================================
+$$  $$ $$$$$$ $$$$    $$$$$$    $$$     $$$ $$$$$$
+$$	$$   $$   $$  $$  $$        $$ $$ $$ $$ $$
+$$$$$$   $$   $$   $$ $$$$$$    $$   $   $$ $$$$$$
+$$  $$   $$   $$  $$  $$        $$       $$ $$
+$$  $$ $$$$$$ $$$$    $$$$$$    $$       $$ $$$$$$
+=========================================================================================================================================
+Documentation:
+
+Hide me is Cyber Security project written in Python. Its main funcionality is to hide text in image (.jpg and .png files can be loaded)
+using LSB method - changing the least significant bit of each pixel. Text is being converted to binary format and every bit is written in
+each corresponding pixel. One character is consisted of 8 bits, and ninth bit is added to indicate if there are more characters after (1-for more
+characters | 0-end of the text). Image with hidden text is stored on Desktop (hi_me.png), it is always in .png format due to compression.
+There is capacity check based on number of pixel chosen image has and the lenght of the message. Another functionality is to find text in
+image, as mentioned, only .png images can have text hidden (.jpg is using lossy compression).
+
+=========================================================================================================================================
+Requriements and libraries:
+
+# Python 3.7.4
+# PILlow 
+# Pyinstaller
+# Code and libraries are packed in python virtual environment
+
+=========================================================================================================================================
+Generating .exe file:
+
+If using Windows .exe file can be generated with Pyinstaller using following command:
+<path/to/payinstaller.exe> -w -F -i="<icon path>" --paths <to/site-packages> <name_of_the_script>.py
+
+- pyinstaller.exe is located in Scripts folder of Project folder
+- icon is located in Include folder of Project folder
+- site-packages are located in Lib folder of Project folder
+- name of the script is hide-me.py
+=========================================================================================================================================
